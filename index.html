@@ -4,94 +4,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <img src="./images/bg-header-desktop.png" alt="Desktop Header Background" class="img-desktop">
-    <img src="./images/bg-header-mobile.png" alt="Mobile Header Background" class="img-mobile">
-    <section class="sec-1">
-      <img src="./images/logo.svg" alt="Google Logo" class="img-logo">
-      <h1> A history of everything you copy</h1>
-      <p> Clipboard allows you to track and organize everything you
-        copy. Instantly <br> access your clipboard on all your devices.
+  <div class="flex relative flex-col items-center min-h-screen bg-white pt-0">
+    <img src="./images/bg-header-desktop.png" alt="Desktop Header Background" class="hidden md:block w-full">
+    <img src="./images/bg-header-mobile.png" alt="Mobile Header Background" class="block md:hidden w-full">
+    <section class="flex flex-col items-center w-full max-w-4xl px-4">
+      <img src="./images/logo.svg" alt="Google Logo" class="block mx-auto mt-[-90px] mb-4">
+      <h1 class="text-4xl tracking-wide text-[var(--Gray-700)] mt-1 mb-4 font-bold text-center"> A
+        history
+        of everything you copy</h1>
+      <p class="text-xl text-[var(--Gray-500)] mt-4 leading-relaxed mb-10 text-center max-w-2xl"> Clipboard allows you
+        to
+        track
+        and organize everything you copy. Instantly access your clipboard on all your devices.
       </p>
-      <div class="btns">
-        <button class="ios-btn">Download for iOS</button>
-        <button class="mac-btn">Download for Mac</button>
-      </div>
-      <h2>Keep track of your snippets</h2>
+      <div class="flex justify-center mb-12 mt-12 w-full">
+        <button
+          class="bg-[var(--Green-500)] transition-all duration-300 hover:bg-[#26d9bc] hover:scale-105 hover:shadow-lg rounded-full py-3 px-7 text-white font-bold border-none mr-8 cursor-pointer">
+          Download iOS
+        </button>
 
-      <p>Clipboard instantly stores any item you copy in the cloud,
-        meaning you can access <br>your snippets immediately on all your
-        devices. Our Mac and iOS apps will help you <br>organize everything.
+        <button
+          class="bg-[var(--Blue-100)] transition-all duration-300 hover:bg-[#4a7cfa] hover:scale-105 hover:shadow-lg rounded-full py-3 px-7 text-white font-bold border-none mr-8 cursor-pointer">
+          Download for Mac
+        </button>
+      </div>
+      <h2 class="text-4xl tracking-wide text-[var(--Gray-700)] mt-1 mb-4 font-bold text-center">
+        Keep track of your snippets</h2>
+
+      <p class="text-xl text-[var(--Gray-500)] mt-4 leading-relaxed mb-10 text-center max-w-2xl">Clipboard instantly
+        stores
+        any
+        item you copy in the cloud,
+        meaning you can access your snippets immediately <br> on all your
+        devices.Our Mac and iOS apps will help you organize everything.
       </p>
     </section>
 
-    <section class="sec-2">
-      <img src="./images/image-computer.png" alt="" class="sec-2-img">
-      <div class="grid-content">
-        <h3>Quick Search</h3>
-        <p>Easily search your snippets by content, category, web address, application, and more.</p>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-6xl px-4 mb-5">
+      <img src="./images/image-computer.png" alt="" class="w-full md:ml-5">
+      <div class="text-left md:p-16">
+        <h3 class="text-2xl text-[var(--Gray-700)] mb-4">Quick Search</h3>
+        <p class="text-[var(--Gray-500)] mb-12 text-xl leading-relaxed">Easily search your snippets by content,
+          category, web address, application, and more.</p>
 
-        <h3>iCloud Sync</h3>
-        <p>Instantly saves and syncs snippets across all your devices.</p>
+        <h3 class="text-2xl text-[var(--Gray-700)] mb-4">iCloud Sync</h3>
+        <p class="text-[var(--Gray-500)] mb-12 text-xl leading-relaxed">Instantly saves and syncs snippets across all
+          your devices.</p>
 
-        <h3>Complete History</h3>
-        <p>Retrieve any snippets from the first moment you started using the app.</p>
+        <h3 class="text-2xl text-[var(--Gray-700)] mb-4">Complete History</h3>
+        <p class="text-[var(--Gray-500)] mb-12 text-xl leading-relaxed">Retrieve any snippets from the first moment you
+          started using the app.</p>
 
       </div>
     </section>
-
-    <section>
-      <div class="Clipboard">
-        <h2>Access Clipboard anywhere</h2>
-        <p>Whether you’re on the go, or at your computer, you can access all your Clipboard <br>
-          snippets in a few simple clicks.
-        </p>
-        <img src="./images/image-devices.png" alt="">
-        <h2>Supercharge your workflow</h2>
-        <p>We’ve got the tools to boost your productivity.</p>
+    <section class="flex flex-col items-center justify-center w-full px-4 mb-4">
+      <h2 class="text-4xl tracking-wide text-[var(--Gray-700)] mt-16 mb-4 text-center font-bold">Access Clipboard
+        anywhere</h2>
+      <p class="text-xl text-[var(--Gray-500)] mt-4 leading-relaxed mb-4 text-center max-w-2xl">Whether you’re on the
+        go, or at your computer, you can access all your Clipboard
+        snippets in a few simple clicks.
+      </p>
+      <img src="./images/image-devices.png" alt="" class="mb-16">
+      <h2 class="text-4xl tracking-wide text-[var(--Gray-700)] mb-4 text-center font-bold">Supercharge your workflow
+      </h2>
+      <p class="text-xl text-[var(--Gray-500)] mt-4 leading-relaxed mb-10 text-center max-w-2xl">We’ve got the tools to
+        boost your productivity.</p>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto mb-4 px-5 items-stretch">
+      <div class="flex flex-col items-center text-center leading-8">
+        <img src="./images/icon-blacklist.svg" alt="" class="mb-4">
+        <h3 class="text-2xl text-[var(--Gray-700)] mb-2 font-bold">Create blacklists</h3>
+        <p class="text-base text-[var(--Gray-500)] mb-4 leading-relaxed">Ensure sensitive information never makes its
+          way to your clipboard by excluding certain sources.</p>
       </div>
-  </div>
-
-  </section>
-  <section class="sec-3">
-    <div class="grid-2">
-      <div class="col-1">
-        <img src="./images/icon-blacklist.svg" alt="">
-        <h3>Create blacklists</h3>
-        <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+      <div class="flex flex-col items-center text-center leading-8">
+        <img src="./images/icon-text.svg" alt="" class="mb-4">
+        <h3 class="text-2xl text-[var(--Gray-700)] mb-2 font-bold">Plain text snippets</h3>
+        <p class="text-base text-[var(--Gray-500)] mb-4 leading-relaxed">Remove unwanted formatting from copied text for
+          a consistent look.</p>
       </div>
-      <div class="col-2">
-        <img src="./images/icon-text.svg" alt="">
-        <h3>Plain text snippets</h3>
-        <p>Remove unwanted formatting from copied text for a consistent look.</p>
+      <div class="flex flex-col items-center text-center leading-8">
+        <img src="./images/icon-preview.svg" alt="" class="mb-4">
+        <h3 class="text-2xl text-[var(--Gray-700)] mb-2 font-bold">Sneak preview</h3>
+        <p class="text-base text-[var(--Gray-500)] mb-4 leading-relaxed">Quick preview of all snippets on your Clipboard
+          for easy access.</p>
       </div>
-      <div class="col-3">
-        <img src="./images/icon-preview.svg" alt="">
-        <h3>Sneak preview</h3>
-        <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+    </section>
+    <section class="flex flex-col items-center w-full px-4 mb-4">
+      <h2 class="text-4xl tracking-wide text-[var(--Gray-700)] mt-16 mb-4 text-center font-bold">Clipboard for iOS and
+        MacOS</h2>
+      <p class="text-xl text-[var(--Gray-500)] mt-4 leading-relaxed mb-10 text-center max-w-2xl">Available for free on
+        the App Store. Download for Mac or iOS, sync with iCloud and you're ready to start
+        adding to your clipboard.</p>
+      <div class="flex justify-center mb-12 mt-12 w-full">
+        <button
+          class="bg-[var(--Green-500)] transition-all duration-300 hover:bg-[#26d9bc] hover:scale-105 hover:shadow-lg rounded-full py-3 px-7 text-white font-bold border-none mr-8 cursor-pointer">
+          Download for iOS
+        </button>
+        <button
+          class="bg-[var(--Blue-100)] transition-all duration-300 hover:bg-[#4a7cfa] hover:scale-105 hover:shadow-lg rounded-full py-3 px-7 text-white font-bold border-none mr-8 cursor-pointer">
+          Download for Mac
+        </button>
       </div>
-  </section>
-  <section class="sec-4">
-    <h2>Clipboard for iOS and MacOS</h2>
-    <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you're ready to start
-      adding to your clipboard.</p>
-    <div class="btns-2">
-      <button class="ios-btn-2">Download for iOS</button>
-      <button class="mac-btn-2">Download for Mac</button>
-    </div>
-    <footer>
-      FAQs
-      Contact Us
-      Privacy Policy
-      Press Kit
-      Install Guide
-    </footer>
-    </div>
+      <footer class="text-center text-[var(--Gray-500)] mt-1">
+        FAQs Contact Us Privacy Policy Press Kit Install Guide
+      </footer>
+    </section>
 
 
 </body>
